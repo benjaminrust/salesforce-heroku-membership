@@ -117,64 +117,14 @@
 							<p>After deployment completes, you will be given the option to view your deployed site.  Select this link to launch the site.  It may take a few minutes to load the first time.  SAVE this URL to your new site.  You will come back to it after completing the Walkthrough where we will build surveys in Salesforce and setup users to access them.</p>
 						</li>
 						<li>
-						<p class="lead">Deploy <a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t370000005x7I"> unmanaged package</a> to your SFDC sandbox.</p>
-                          <p class="bold">*** IMPORTANT ***  If your target Salesforce org is not a Developer Edition, you will have to manually add a custom field (of type Checkbox) to the Accounts object with the API name "Active__c".  If you are deploying to a Developer Edition Salesforce org this field is already added. <i>This field is required for the app to work.</i>  Verify that in your target Salesforce org now.
-
-
-
+							<p class="lead">Create a Salesforce Developer org and Install the Salesforce Appexchange Package:</p>
+							<p class="margin-t md">Prior to installing the app on Heroku, sign up for a Salesforce
+								developer account at https://developer.salesforce.com/</p>
+							<p>Once you have logged into your Salesforce Developer org, install the following Appexchange Package:
+							https://login.salesforce.com/packaging/installPackage.apexp?p0=04t360000009Ugf</p>
 						</li>
-						<li>
-							<p class="lead">Configure Heroku Connect using the <a href="https://devcenter.heroku.com/articles/herokuconnect"> HC setup instructions</a> to connect to your SFDC org and Postgres DB. Be sure to follow steps 1-4 and specify the schema as documented in these steps.</p>
-							<p class="bold">*** IMPORTANT *** The first step of the Heroku Connect setup process will ask you for a schema name (and will default the name to ‘salesforce’).  You MUST specify  "public" as the schema name or the app will not work.</p>
 
-						</li>
-						<li>
-							<p class="lead">Import Configuration JSON file with SFDC object mappings</p>
-							<p class="bold">In your Mobile-Survey Heroku app:</p>
-							<ul>
-								<li>
-									<p>Select Heroku Connect from the dashboard</p>
-									<a data-lightbox="step-4" data-title="Step 4 - 001" href="images/setup_step-04-001.jpg"><img src="images/setup_step-04-001.jpg" class="img-responsive margin-b md" /></a>
-								</li>
-								<li>
-									<p>Then select Settings->Import/Export Configuration and import <a href="https://drive.google.com/file/d/0B5eb1d8xjolETjE5akRlSDJJRGM/view?usp=sharing">the configuration file.</a></p>
-									<a data-lightbox="step-4" data-title="Step 4 - 002" href="images/setup_step-04-002.jpg"><img src="images/setup_step-04-002.jpg" class="img-responsive margin-b md" /></a>
-								  <p>Update your Heroku configuration variables to use your Postgres database.</p>
-								</li>
-							</ul>
-						</li>
-						<li>
-                          <p class="lead">Update Configuration variables for Postgres DB</p>
-                          <p>From your Heroku Dashboard - click into your postgres DB to view the Connection Settings </p>
-                          <p>In another tab, go to your Heroku Dashboard and select Settings</p>
-                          <ul>
-                            <li>Click the "Reveal Config Vars" button</li>
-                            <li><p>Click the "Edit" button</p></li>
-                            <li><p>Change the following 3 config variables to match your DB Connection Settings:</p></li>
-                          <ul>CC_DB_PW</ul>
-                            <ul>CC_DB_URL</ul>
-                           <ul>CC_DB_USER</ul>
-                          </br></ul>
-                          <p class="bold">*** IMPORTANT *** The CC_DB_URL must follow this format exactly - you need to populate 3 values - Host, Port, and Database.  Make sure that you have NO SPACES.</p>
-                          <ul>
-                            <p>EXAMPLE CC_DB_URL value:</br/> jdbc:postgresql://Host:Port/Database?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
-</p>
-                            <p>EXAMPLE CC_DB_URL value: </br>jdbc:postgresql://ec2-54-163-228-0.compute-1.amazonaws.com:5432/d8vq61oi2hlfbd?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory</p>
-                              <li><p>Select the “Save” button to save your new configuration parameters.</li></p>
-							</ul>
-
-
-							</li>
-						<li>
-							<p class="lead">Restart Heroku Connect:</p>
-							<ul>
-								<li>Settings->Manage Connection:</li>
-								<li>
-									<p>Restart</p>
-									<a data-lightbox="step-5" data-title="Step 5 - 001" href="images/setup_step-05-001.jpg"><img src="images/setup_step-05-001.jpg" class="img-responsive margin-b md" /></a>
-								</li>
-							</ul>
-						</li>
+				
 
 					</ul><!-- /.steps -->
 				</div><!-- /.page-content -->
