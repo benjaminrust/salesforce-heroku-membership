@@ -51,36 +51,8 @@
 
 
 
-					#Create a Salesforce Developer org and Install the Salesforce Appexchange Package
 
-					Prior to installing the app on Heroku, sign up for a Salesforce developer account at https://developer.salesforce.com/
 
-					Once you have logged into your Salesforce Developer org, install the following Appexchange Package:
-					https://login.salesforce.com/packaging/installPackage.apexp?p0=04t360000009Ugf
-
-					#Install the App via the Heroku Button
-
-					[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-					In order to run the example you need to have ruby installed.
-
-					You also need to set the ClientSecret, ClientId, Domain and CallbackURL for your Auth0 app as enviroment variables with the following names respectively: AUTH0_CLIENT_SECRET, AUTH0_CLIENT_ID, AUTH0_DOMAIN and AUTH0_CALLBACK_URL.
-
-					For that, if you just create a file named .env in the directory and set the values like the following, the app will just work:
-
-					````bash
-					# .env file
-					AUTH0_CLIENT_SECRET=myCoolSecret
-					AUTH0_CLIENT_ID=myCoolClientId
-					AUTH0_DOMAIN=samples.auth0.com
-					AUTH0_CALLBACK_URL=http://localhost:3000/auth/auth0/callback
-					````
-					Once you've set those 4 enviroment variables, just run `rails s` and try calling [http://localhost:3000/](http://localhost:3000/)
-
-					If you have the Heroku Local Config utility installed (https://github.com/ddollar/heroku-config) you can use the following to create the .env file
-					````bash
-					heroku config:pull --overwrite
-					````
 
 					#Configure Heroku Connect Mapping
 
@@ -108,14 +80,7 @@
 
 
 					<ul class="steps">
-						<li>
-							<p class="lead">Deploy to Heroku using the Heroku 1-button deployment:</p>
-							<a target="_blank" href="https://heroku.com/deploy?template=https://github.com/Appirio/Mobile-Survey/tree/master">
-								<img src="https://www.herokucdn.com/deploy/button.png" alt="image deploy button"></a>
-                          <p> For Salesforce and Heroku deployments you will need Admin access to both systems. </p>
-							<p class="margin-t md">Heroku will ask for the name of the app.  Name it Mobile-Survey.</p>
-							<p>After deployment completes, you will be given the option to view your deployed site.  Select this link to launch the site.  It may take a few minutes to load the first time.  SAVE this URL to your new site.  You will come back to it after completing the Walkthrough where we will build surveys in Salesforce and setup users to access them.</p>
-						</li>
+
 						<li>
 							<p class="lead">Create a Salesforce Developer org and Install the Salesforce Appexchange Package:</p>
 							<p class="margin-t md">Prior to installing the app on Heroku, sign up for a Salesforce
@@ -124,7 +89,29 @@
 							https://login.salesforce.com/packaging/installPackage.apexp?p0=04t360000009Ugf</p>
 						</li>
 
-				
+						<li>
+							<p class="lead">Install the App via the Heroku Button:</p>
+							<a target="_blank" href="https://heroku.com/deploy?template=https://github.com/trifinlabs/salesforce-heroku-membership/tree/master">
+								<img src="https://www.herokucdn.com/deploy/button.png" alt="image deploy button"></a>
+							<p class="margin-t md">Heroku will ask for the name of the app.  Name it Member-Registration-YOURNAMEHERE.</p>
+							<p>After deployment completes, you will be given the option to view your deployed site. If you click launch, the site will throw an exception because our Heroku Connect configuration and Postgres schema do not exist.</p>
+						</li>
+
+
+						<li>
+							<p class="lead">(OPTIONAL STEP) To Run the app locally: </p>
+							<a target="_blank" href="https://github.com/ddollar/heroku-config"> Heroku Config Utility
+								</a>
+							<p class="margin-t md">If you have the Heroku Local Config utility installed (https://github.com/ddollar/heroku-config) you can use the following to create the .env file
+							````bash
+							heroku config:pull --overwrite
+							````</p>
+						</li>
+
+
+
+
+
 
 					</ul><!-- /.steps -->
 				</div><!-- /.page-content -->
