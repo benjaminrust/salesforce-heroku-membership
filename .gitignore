@@ -8,4 +8,4 @@
 *.sass-cache
 */*/*.css.map
 sftp-config.json
-/_site
+_site/
