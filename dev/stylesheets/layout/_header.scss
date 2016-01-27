@@ -1,0 +1,37 @@
+header {
+	position:relative;
+	background:#f4f4f4;
+	.container-bs {
+		//@include display(flex);
+		//@include flex-direction(row);
+		//@include flex-wrap(wrap);
+		a {
+			color:$text-color;
+			font-size:16px;
+		}
+		.active {
+			> a {
+				color:$brand-primary;
+				font-weight:500;
+			}
+		}
+	}
+	.gh {
+		@media (min-width:$screen-sm) {
+			padding-left:50px !important;
+		}
+		position:relative;
+		img,svg {
+			position:absolute;
+			top:12px;
+			left:1rem;
+			margin-right:$gap-sm;
+			width:28px;
+			height:28px;
+		}
+		&:hover svg {
+			path {fill:white}
+		}
+	}
+}
+

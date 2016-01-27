@@ -1,0 +1,12 @@
+.navbar {
+	margin-bottom:0;
+	&.navbar-default {
+		border:0;
+		padding-bottom:0;
+	}
+	.navbar-brand {
+		@include font-medium;
+		font-size:18px;
+		line-height:18px;
+	}
+}
