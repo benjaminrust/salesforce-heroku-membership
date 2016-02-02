@@ -205,6 +205,8 @@ hr {
   font-family: "Roboto", sans-serif;
   font-weight: 700; }
 
+.page-content img {max-width:100%; height: auto;}
+
 header {
   position: relative;
   background: #f4f4f4; }
