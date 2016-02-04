@@ -1292,8 +1292,10 @@ input[required] {
     min-height: auto;
     border: 0;
   }
-  #main-navbar .nav>li>a:hover {
-    background:#0C7FB1;
+  #main-navbar .nav>li>a:hover,
+  .nav>.dropdown>a {
+  	color: #fff;
+    background:#0B4D75;
   }
   #main-nav .navbar-toggle {
     margin-right: 0;
@@ -1305,6 +1307,13 @@ input[required] {
     height: 2px;
     border-radius: 1px;
     background-color: white;
+  }
+  .yamm .yamm-content {
+    padding: 0px 15px;
+    color: white;
+  }
+  .yamm .yamm-content a {
+  	color: #fff;
   }
   #task-list h4 {
     font-weight: 400;
