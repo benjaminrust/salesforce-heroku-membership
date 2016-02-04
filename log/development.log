@@ -7029,3 +7029,94 @@ Processing by JoinController#new as HTML
   Rendered shared/_headernav.html.erb (0.5ms)
   Rendered shared/_footernav.html.erb (0.0ms)
 Completed 200 OK in 121ms (Views: 10.8ms | ActiveRecord: 108.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:48:39 -0500
+Processing by JoinController#new as HTML
+  [1m[36mMembershipTier Load (54.4ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  [1m[35mMembershipBenefits Load (54.2ms)[0m  SELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name
+  Rendered join/new.html.erb within layouts/application (485.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  Rendered shared/_headernav.html.erb (1.2ms)
+  Rendered shared/_footernav.html.erb (0.3ms)
+Completed 200 OK in 565ms (Views: 79.1ms | ActiveRecord: 431.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:48:40 -0500
+Processing by JoinController#new as HTML
+  [1m[35mMembershipTier Load (53.8ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  [1m[36mMembershipBenefits Load (53.3ms)[0m  [1mSELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name[0m
+  Rendered join/new.html.erb within layouts/application (112.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  Rendered shared/_headernav.html.erb (0.6ms)
+  Rendered shared/_footernav.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 11.4ms | ActiveRecord: 107.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:55:55 -0500
+Processing by JoinController#new as HTML
+  [1m[36mMembershipTier Load (51.6ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  [1m[35mMembershipBenefits Load (52.0ms)[0m  SELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name
+  Rendered join/new.html.erb within layouts/application (464.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  Rendered shared/_headernav.html.erb (0.8ms)
+  Rendered shared/_footernav.html.erb (0.1ms)
+Completed 200 OK in 479ms (Views: 33.1ms | ActiveRecord: 439.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:56:15 -0500
+Processing by JoinController#new as HTML
+  [1m[35mMembershipTier Load (52.3ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  [1m[36mMembershipBenefits Load (52.3ms)[0m  [1mSELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name[0m
+  Rendered join/new.html.erb within layouts/application (112.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  Rendered shared/_headernav.html.erb (1.0ms)
+  Rendered shared/_footernav.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 14.8ms | ActiveRecord: 104.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:58:25 -0500
+Processing by JoinController#new as HTML
+  [1m[36mMembershipTier Load (53.9ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  [1m[35mMembershipBenefits Load (52.7ms)[0m  SELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name
+  Rendered join/new.html.erb within layouts/application (112.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  Rendered shared/_headernav.html.erb (0.6ms)
+  Rendered shared/_footernav.html.erb (0.0ms)
+Completed 200 OK in 121ms (Views: 13.6ms | ActiveRecord: 106.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 12:59:56 -0500
+Processing by JoinController#new as HTML
+  [1m[36mMembershipTier Load (55.3ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  [1m[35mMembershipBenefits Load (55.4ms)[0m  SELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name
+  Rendered join/new.html.erb within layouts/application (488.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  Rendered shared/_headernav.html.erb (1.3ms)
+  Rendered shared/_footernav.html.erb (0.4ms)
+Completed 200 OK in 566ms (Views: 75.2ms | ActiveRecord: 437.6ms)
+
+
+Started GET "/callback?code=3Yp8G9PmY3ggPwM3" for 127.0.0.1 at 2016-02-04 13:00:02 -0500
+Processing by Auth0Controller#callback as HTML
+  Parameters: {"code"=>"3Yp8G9PmY3ggPwM3"}
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-02-04 13:00:02 -0500
+Processing by DashboardController#show as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :logged_in_using_omniauth? rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 13:00:03 -0500
+Processing by JoinController#new as HTML
+  [1m[35mMembershipTier Load (53.5ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  [1m[36mMembershipBenefits Load (53.9ms)[0m  [1mSELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name[0m
+  Rendered join/new.html.erb within layouts/application (115.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  Rendered shared/_headernav.html.erb (0.8ms)
+  Rendered shared/_footernav.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 13.8ms | ActiveRecord: 107.4ms)
