@@ -205,6 +205,25 @@ hr {
   font-family: "Roboto", sans-serif;
   font-weight: 700; }
 
+.page-content {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.page-content img {max-width:100%; height: auto;}
+
 header {
   position: relative;
   background: #f4f4f4; }
@@ -214,6 +233,13 @@ header {
   header .container-bs .active > a {
     color: #7ea0c3;
     font-weight: 500; }
+  .navbar-default .navbar-nav > li > a {
+    padding: 0 25px;
+    line-height: 50px;
+  }
+  .navbar-default .navbar-header {
+    float: none;
+  }
   header .gh {
     position: relative; }
     @media (min-width: 768px) {
@@ -234,8 +260,11 @@ header {
     width: 100%; } }
 
 .hero {
-  background: #333E48;
+  background: #094061;
   color: white; }
+  .hero .img-responsive {
+    margin: 46px auto;
+}
 
 .page-header h1 {
   margin-top: 3rem;
@@ -277,7 +306,7 @@ hr {
     height: 140px;
     margin: 0 auto; }
     .downloads svg path {
-      fill: #333E48; }
+      fill: #094061; }
   .downloads .btn-bs {
     display: block;
     max-width: 160px;
@@ -330,8 +359,15 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  font-size: 13px;
-  text-align: right; }
+  font-size: 13px; }
+  footer .footerGit {
+      text-align: right;
+    }
+  @media screen and (min-width: 768px;) {
+    footer .footerGit {
+      text-align: right;
+    }
+  }
   footer a {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -503,15 +539,19 @@ footer {
 
 @media (max-width: 480px) {
   .navbar-default {
-    padding: 0 0 1rem; } }
+    padding: 0 0 1rem; }
+}
 .navbar-default .divider {
   height: 1px;
   background: rgba(0, 0, 0, 0.1);
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
+
 .navbar-toggle {
-  margin-right: 0; }
+  margin-right: 0;
+  border: 0;
+  margin-top: 20px; }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .navbar-left {
@@ -978,12 +1018,37 @@ button.btn-bs.block {
   margin-bottom: 0; }
   .navbar.navbar-default {
     border: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+      background-color: #f5f5f5; }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+      color: white;
+      background-color: #0e6395; }
+    .navbar-default .navbar-collapse {
+      background-color: #0C7FB1;
+    }
   .navbar .navbar-brand {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 18px; }
+    
+    .navbar .navbar-brand span {
+    	font-weight: bold;
+      color: #0C7FB1;}
+
+    .navbar-brand {height: auto;}
+	.navbar-brand > img {
+	    display: block;
+	    margin: -4px 17px 6px 0;
+	    width: 165px;
+	    float: none;}
+	@media (min-width: 768px) {
+		.navbar-brand > img {
+	    display: inline-block;
+      margin: -4px 20px 0 0;
+      width: 165px;
+      float: none;}
+	}
 
 @-webkit-keyframes ripple {
   100% {

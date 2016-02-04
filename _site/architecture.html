@@ -7,36 +7,42 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/custom-bootstrap.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/custom.css" media="screen">
+		<link rel="shortcut icon" href="images/TrifinFavIco.png" type="image/x-icon" />
 	</head>
 
 	<body>
 
-				<header>
-					<nav class="navbar navbar-default">
-						<div class="container-bs">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="index.html">Member Registration</a>
-							</div>
-							<div class="collapse navbar-collapse" id="main-nav">
-								<ul class="nav navbar-nav">
-									<li><a href="architecture.html">Architecture</a></li>
-									<li><a href="setup.html">Setup</a></li>
-									<li><a href="walkthrough.html">Walkthrough</a></li>
-								</ul>
-								<ul class="nav navbar-nav navbar-right">
-									<li role="separator" class="divider"></li>
-									<li><a class="gh" href="https://github.com/trifinlabs/salesforce-heroku-membership"><img src="images/ic_github.svg" alt="Github Project" class="img-inline hidden-xs" />View the GitHub Project</a></li>
-								</ul>
-							</div><!-- /.navbar-collapse -->
-						</div><!-- /.container-bs -->
-					</nav>
-				</header>
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<div class="container-bs">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							<img src="images/TriFin-header-logo.png" alt="Trifin Labs"><span>Member Registration</span>
+						</a>
+  					</div><!-- /.container-bs -->
+				</div>
+				<div class="collapse navbar-collapse" id="main-nav">
+					<div class="container-bs">
+						<ul class="nav navbar-nav">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="architecture.html">Architecture</a></li>
+							<li><a href="setup.html">Setup</a></li>
+							<li><a href="walkthrough.html">Walkthrough</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a target="_blank" href="https://heroku.com/deploy?template=https://github.com/trifinlabs/salesforce-heroku-membership/tree/master"><img src="https://www.herokucdn.com/deploy/button.png" alt="image deploy button"></a></li>
+							<li><a class="gh" href="https://github.com/trifinlabs/salesforce-heroku-membership"><img src="images/ic_github.svg" alt="Github Project" class="img-inline hidden-xs" />GitHub Project</a></li>
+						</ul>
+					</div><!-- /.container-bs -->
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</header>
 
 		<section class="main">
 			<div class="container-bs">
@@ -46,6 +52,53 @@
 				</div><!-- /.page-header -->
 
 				<div class="page-content">
+					<img src="images/m-architecture-detail.png" alt="Trifin Labs - Membership Architecture">
+					<p class="lead">Above is the complete architecture for the Membership Registration App. By leveraging the Salesforce App Cloud, we
+					can now offer customers an amazing and seamless membership registration experience.</p>
+					<p class="lead">Additionally, because we are using Heroku Connect to synchronize data between Heroku and Salesforce, our internal
+					business users can manage all membership tiers, new registrations, and members in their primary business system, Salesforce</p>
+
+					<ul class="steps">
+						<li>
+							<p class="lead">Salesforce</p>
+
+							<p class="margin-t md">Salesforce is the leading cloud platform as a service and CRM on the planet!</p>
+							<p>For this example app, Salesforce is our business system to manage members, membership options, and allows for membership management</p>
+						</li>
+
+							<li>
+								<p class="lead">Heroku Connect</p>
+
+								<p class="margin-t md">Using bi-directional synchronization between Salesforce and Heroku Postgres,
+									Heroku Connect unifies the data in your Postgres database with
+										members, membership contacts, memberships, and membership tiers</p>
+								<p>NO coding or complex configuration is required</p>
+							</li>
+
+							<li>
+								<p class="lead">Heroku Postgres - HEROKU ADDON</p>
+
+								<p class="margin-t md">The SQL database service for developers.</p>
+								<p>Easy to Set Up, Secure by Default</p>
+							</li>
+
+							<li>
+								<p class="lead">Auth0 - HEROKU ADDON</p>
+
+								<p class="margin-t md">Out of the box authentication and authorization for customer facing apps</p>
+								<p>Don't spend time reinventing the wheel - get the app launched and provide a SECURE authenticated experience!</p>
+							</li>
+
+							<li>
+								<p class="lead">Ruby on Rails</p>
+
+								<p class="margin-t md">Using bi-directional synchronization between Salesforce and Heroku Postgres,
+									Heroku Connect unifies the data in your Postgres database with
+										members, membership contacts, memberships, and membership tiers</p>
+								<p>NO coding or complex configuration is required</p>
+							</li>
+
+					</ul>
 
 				</div><!-- /.page-content -->
 
@@ -54,7 +107,14 @@
 
 		<footer>
 			<div class="container-bs">
-				<a href="https://github.com/trifinlabs/salesforce-heroku-membership">Member Registration</a> is maintained by <a href="https://github.com/TriFinLabs">TriFin Labs</a>.
+				<div class="row">
+					<div class="col-sm-12 col-md-6">
+					<a href="http://trifinlabs.com">TriFin Labs</a>
+					</div>
+					<div class="col-sm-12 col-md-6 footerGit">
+						<a href="https://github.com/trifinlabs/salesforce-heroku-membership">Member Registration</a> is maintained by <a href="https://github.com/TriFinLabs">TriFin Labs</a>.
+					</div>
+				</div><!-- /.row -->
 			</div><!-- /.container-bs -->
 		</footer>
 
