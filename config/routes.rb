@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'dashboard/show'
 
-  get "/" => "home#show"
+  get "/" => "join#new"
 
   get "/dashboard" => "dashboard#show"
 
