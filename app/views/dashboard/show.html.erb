@@ -2,6 +2,7 @@
     <div class="container">
         <div class="login-page clearfix">
           <div class="logged-in-box auth0-box logged-in">
+            <br/>
             <img class="avatar" src="<%= @user[:info][:image] %>"/>
             <h2>Welcome <%= @user[:info][:name] %></h2>
             <pre><%= JSON.pretty_generate(@user[:info]) %></pre>
