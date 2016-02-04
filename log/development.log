@@ -7120,3 +7120,30 @@ Processing by JoinController#new as HTML
   Rendered shared/_headernav.html.erb (0.8ms)
   Rendered shared/_footernav.html.erb (0.0ms)
 Completed 200 OK in 122ms (Views: 13.8ms | ActiveRecord: 107.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-04 13:09:39 -0500
+Processing by JoinController#new as HTML
+  [1m[36mMembershipTier Load (57.8ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  [1m[35mMembershipBenefits Load (51.2ms)[0m  SELECT "salesforce"."membermgmt__membership_benefit__c".* FROM "salesforce"."membermgmt__membership_benefit__c"  WHERE "salesforce"."membermgmt__membership_benefit__c"."membermgmt__type__c" = 'Default'  ORDER BY name
+  Rendered join/new.html.erb within layouts/application (472.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10[0m
+  Rendered shared/_headernav.html.erb (1.4ms)
+  Rendered shared/_footernav.html.erb (0.4ms)
+Completed 200 OK in 556ms (Views: 80.2ms | ActiveRecord: 418.6ms)
+
+
+Started GET "/callback?code=MaFuoaiKgtuCGcIC" for 127.0.0.1 at 2016-02-04 13:09:48 -0500
+Processing by Auth0Controller#callback as HTML
+  Parameters: {"code"=>"MaFuoaiKgtuCGcIC"}
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2016-02-04 13:09:48 -0500
+Processing by DashboardController#show as HTML
+  Rendered dashboard/show.html.erb within layouts/application (0.5ms)
+  [1m[35mMembershipTier Load (51.2ms)[0m  SELECT  "salesforce"."membermgmt__membership_tier__c".* FROM "salesforce"."membermgmt__membership_tier__c"   ORDER BY membermgmt__sort_order__c LIMIT 10
+  Rendered shared/_headernav.html.erb (52.3ms)
+  Rendered shared/_footernav.html.erb (0.0ms)
+Completed 200 OK in 62ms (Views: 10.0ms | ActiveRecord: 51.2ms)
