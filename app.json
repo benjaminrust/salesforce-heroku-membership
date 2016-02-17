@@ -9,10 +9,6 @@
     "COOKIE_SECRET": {
             "description": "This gets generated",
             "generator": "secret"
-    },
-    "SETUP_BY": {
-            "description": "Who initiated this setup",
-            "value": ""
     }
   }
 }
