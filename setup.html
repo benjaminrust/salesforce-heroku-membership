@@ -59,11 +59,20 @@
 						<li>
 							<p class="lead">Create a Salesforce Developer org and Install the Salesforce Appexchange Package:</p>
 							<p class="margin-t md">Prior to installing the app on Heroku, sign up for a Salesforce
-								developer account at <a href="https://developer.salesforce.com/">https://developer.salesforce.com/</a></p>
+								developer account at <a href="https://developer.salesforce.com/">https://developer.salesforce.com/</a>
+
+
+
+							</p>
 							<p>Once you have logged into your Salesforce Developer org, install the following Appexchange Package:
 							<a href="https://login.salesforce.com/packaging/installPackage.apexp?p0=04t36000000A6Nr" target="_blank"><b>https://login.salesforce.com/packaging/installPackage.apexp?p0=04t36000000A6Nr</b></a></p>
 							<p> <h2>The package installation will automatically populate the Membership Tier object with data.</h2></p>
-							<p> <h2>When installing, you may install for Admin Only.</h2></p>
+							<p> <h2>When installing, you may install for Admin Only.</h2>
+
+								<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/sfdc-package-permissions.png"><img src="images/sfdc-package-permissions.png" class="img-responsive margin-b md" /></a>
+								<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/sfdc-package-permissions-1.png"><img src="images/sfdc-package-permissions-1.png" class="img-responsive margin-b md" /></a>
+
+							</p>
 
 						</li>
 
@@ -71,8 +80,25 @@
 							<p class="lead">Install the App via the Heroku Button:</p>
 							<a target="_blank" href="https://heroku.com/deploy?template=https://github.com/trifinlabs/salesforce-heroku-membership/tree/master">
 								<img src="https://www.herokucdn.com/deploy/button.png" alt="image deploy button"></a>
-							<p class="margin-t md">Heroku will ask for the name of the app.  Name it member-registration-yournamehere.</p>
-							<p>After deployment completes, you will be given the option to view your deployed site. If you click launch, the site will throw an exception because our Heroku Connect configuration and Postgres schema do not exist.</p>
+							<p class="margin-t md">Heroku will ask for the name of the app.  Name it member-registration-yournamehere.
+
+								<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-button-app-setup.png"><img src="images/heroku-button-app-setup.png" class="img-responsive margin-b md" /></a>
+
+ 						</p>
+					</li>
+
+							<li><p>After deployment completes, you will be given the option to view your deployed site. If you click launch, the site will throw an exception because our Heroku Connect configuration and Postgres schema do not exist.</p>
+							<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-button-app-deploy-progress-complete.png"><img src="images/heroku-button-app-deploy-progress-complete.png" class="img-responsive margin-b md" /></a>
+						</li>
+
+						<li>
+							<p class="lead">Click on Manage App to view the App Detail on Heroku</p>
+							<p class="margin-t md">
+								<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-manage-app.png"><img src="images/heroku-manage-app.png" class="img-responsive margin-b md" /></a>
+
+
+ 							</p>
+
 						</li>
 
 
@@ -86,18 +112,57 @@
 						</li>
 
 						<li>
-							<p class="lead">Configure Heroku Connect Mapping:</p>
-							<p>Once you have installed the app, the final step is to configure Heroku Connect.</p>
-							<a target="_blank" href="https://github.com/trifinlabs/salesforce-heroku-membership/tree/master/membership-heroku-connect-mapping.json">
-								DOWNLOAD JSON FILE</a>
-							<p class="margin-t md">
-								Navigate to the Settings tab, choose Import/Export Configuration, click the Import button and then click Choose file to locate the file to upload. Click the Upload button to begin the import.
-							</p>
-							<p>
-								On successful completion of the import Heroku Connect will begin syncing data from your new Salesforce organization into the database.
-							</p>
+								<p class="lead">Setup Heroku Connect</p>
+								<p class="margin-t md">
+									<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-setup.png"><img src="images/heroku-connect-setup.png" class="img-responsive margin-b md" /></a>
+								</p>
+							</li>
 
-						</li>
+								<li>
+										<p class="lead">Setup Connection And Schema</p>
+										<p class="margin-t md">
+											<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-schema.png"><img src="images/heroku-connect-schema.png" class="img-responsive margin-b md" /></a>
+								</p>
+							</li>
+
+									<li>
+											<p class="lead">Authorize Salesforce Connection</p>
+											<p class="margin-t md">
+												<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-authorize-salesforce.png"><img src="images/heroku-connect-authorize-salesforce.png" class="img-responsive margin-b md" /></a>
+											</p>
+							</li>
+
+								<li>
+									<p class="lead">Authorize Salesforce Connection - cont.</p>
+								<p class="margin-t md">
+
+									<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-authorize-salesforce-allow.png"><img src="images/heroku-connect-authorize-salesforce-allow.png" class="img-responsive margin-b md" /></a>
+								</p>
+							</li>
+
+											<li>
+												<p class="lead">Configure Heroku Connect Object Mappings</p>
+
+												<p class="margin-t md">
+													<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-objects.png"><img src="images/heroku-connect-objects.png" class="img-responsive margin-b md" /></a>
+												</p>
+												<p>Once you have installed the app, the final step is to configure Heroku Connect.
+													<a target="_blank" href="images/heroku-connect-fieldmap.xlsx" >
+														<h1> >>DOWNLOAD EXCEL MAPPING FILE<< </h1></a></p>
+							</li>
+
+							<li>
+									<p class="lead">For all object mappings select the following about streaming API usage and bi-directional integration</p>
+
+								<p class="margin-t md">
+									<a data-lightbox="step-1" data-title="Step 1 - 001" href="images/heroku-connect-objects.png"><img src="images/heroku-connect-objects.png" class="img-responsive margin-b md" /></a>
+								</p>
+							</li>
+
+							<li>
+									<p class="lead">Congratulations!!! You are now ready to launch and view your app</p>
+
+							</li>
 
 
 </ul><!-- /.steps -->

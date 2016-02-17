@@ -341,6 +341,10 @@ hr {
       font-size: 34px;
       font-weight: 300; }
 
+      @media (max-width: 767px) {
+        .steps .text-center-xs {text-align: center;margin-bottom: 20px;}
+      }
+
 ul.alpha {
   list-style-type: lower-alpha; }
 
