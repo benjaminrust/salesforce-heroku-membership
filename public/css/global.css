@@ -388,8 +388,8 @@ input[required] {
   background-color: #0B4D75;
 }
 /* Join Form */
-#join_aaa label {display: block;}
-#join_aaa label[class="radio-inline"] {display: inline-block;}
+#join_TrifinLabs label {display: block;}
+#join_TrifinLabs label[class="radio-inline"] {display: inline-block;}
 .planname {
   font-size: 22px;
   font-weight: bold;
