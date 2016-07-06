@@ -3,7 +3,7 @@
   "description": "Membership example app.",
   "website": "http://trifinlabs.com",
   "success_url": "/",
-  "addons": ["heroku-postgresql:hobby-dev", "papertrail", "auth0:dev", "herokuconnect:demo"],
+  "addons": ["heroku-postgresql:hobby-dev", "papertrail", "auth0:free", "herokuconnect:demo"],
   "env": {
     "RAILS_ENV": "production",
     "COOKIE_SECRET": {
